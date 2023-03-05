@@ -2,16 +2,19 @@
 Inference script for Meta's LLaMA models using Hugging Face wrapper as in https://github.com/huggingface/transformers/pull/21955
 
 ## 7B model
-### int8 (seems bad)
+### int8 (decent now after removing extra EOS)
 #### contrastive search
-'Puma is a multicolored cat. He has a white face, paws, chest, belly and tail tip. He has green eyes.\nPuma\'s favorite food is tuna.\nRetrieved from "http://thelittlestpetshop.wikia.com/wiki/Puma?oldid=4113"UIVie
-w.h" -- Cached in L2 cache -- References recursive data (as author) View all revisions Login/Create account New page: Create a new page on this wiki. Go to Special:NewPage and fill in the form. This will create a n
-ew page called "New page name" (or something similar). You can add a link to this page by typing [[New page name]] in any page, and clicking "Show preview" or "Save page".\nThe Little Pet Shop Wiki is a FANDOM TV C
-ommunity.'
+```
+Puma is a 1996 film starring Jackie Chan and Leslie Cheung Kwok-wing.
+The film's soundtrack was composed by Shigeru Umebayashi, who was nominated for the Golden Horse Award for Best Score at the 24th Golden Horse Awards.boldsquo;s first martial arts film in a decade, PUMA is a remake of the 1976 Shaw Brothers film Fist of Fury. Chan plays Chen Zhen, a Chinese student who travels to Japan to study karate. After being beaten by a group of yakuza, he vows to avenge his friend's death. The Japanese police are unable to stop him, and the yakuza send their best fighters to try to stop him.
+Chen Zhen (Jackie Chan) is a Chinese student who has traveled to Japan to study karate. While on
+```
+
 
 ### float16 (decent)
 #### contrastive search
-'Puma is a multicolored cat. He is about 1 year old (DOB 1/1/18). His color is black and white with red tabby markings. He was found in the parking lot of a Walmart in Tucson, AZ.\nPuma’s owner is a woman named Sh
-aron. She has had Puma since he was a kitten. Sharon’s boyfriend was the one who found Puma in the parking lot. He had been missing for a few days and they were worried about him.\nThe first time I met Puma was at 
-the Humane Society of Southern Arizona. He was very scared and hid behind a cage. It took a while to get him to come out of his hiding place. I was able to pet him and he purred, but he was not comfortable with bei
-ng petted.\nWhen I went to pick him up, he was in a carrier with a l'
+```
+Puma is a 1980’s classic that has stood the test of time. With its sleek design and sporty look, Puma is a shoe that can be worn with anything and everything.
+The Puma Suede is a sneaker that was introduced in 1968 by Adi Dassler and his brother Rudi. The Suede’s design was inspired by the moccasin shoes that Native Americans wore in the 19th century. It was originally called Clyde Court, after Walt Clyde Frazier, a basketball player for the New York Knicks.\nThe first version of the Puma Suede was made of leather and had a rubber sole. Later, the design was changed to a canvas upper and a plastic wedge heel. This version was more popular and is the one that we know today.
+Today, the Puma Suede is one of the most popular
+```
