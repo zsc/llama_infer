@@ -8,7 +8,7 @@ w.h" -- Cached in L2 cache -- References recursive data (as author) View all rev
 ew page called "New page name" (or something similar). You can add a link to this page by typing [[New page name]] in any page, and clicking "Show preview" or "Save page".\nThe Little Pet Shop Wiki is a FANDOM TV C
 ommunity.'
 
-## float16
+## float16 (decent)
 ### contrastive search
 'Puma is a multicolored cat. He is about 1 year old (DOB 1/1/18). His color is black and white with red tabby markings. He was found in the parking lot of a Walmart in Tucson, AZ.\nPuma’s owner is a woman named Sh
 aron. She has had Puma since he was a kitten. Sharon’s boyfriend was the one who found Puma in the parking lot. He had been missing for a few days and they were worried about him.\nThe first time I met Puma was at 
