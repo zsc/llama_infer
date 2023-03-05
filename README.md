@@ -1,10 +1,20 @@
 # llama_infer
 Inference script for Meta's LLaMA models using Hugging Face wrapper as in https://github.com/huggingface/transformers/pull/21955
 
+## First convert the weights
+```
+python src/transformers/models/llama/convert_llama_weights_to_hf.py \
+    --input_dir /path/to/downloaded/llama/weights \
+    --model_size 7B \
+    --output_dir /data/llama/hf/
+```
+
+Here we assume the converted weigths are in `/data/llama/hf/` .
+
 ## 7B model
 
 ### int8 (decent now after removing extra EOS)
-```python3 test_llam.py --do_int8 --low_cpu_mem_usage --variant 7b```
+```python3 test_llam.py --do_int8 --low_cpu_mem_usage --variant 7b --model_path /data/llama/hf/```
 
 #### contrastive search
 ```
@@ -15,7 +25,7 @@ Chen Zhen (Jackie Chan) is a Chinese student who has traveled to Japan to study 
 
 
 ### float16 (decent)
-```python3 test_llam.py --low_cpu_mem_usage --variant 7b```
+```python3 test_llam.py --low_cpu_mem_usage --variant 7b --model_path /data/llama/hf/```
 
 #### contrastive search
 ```
