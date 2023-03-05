@@ -63,7 +63,8 @@ if __name__ == "__main__":
     }
     prompt = "Puma is a "
     with torch.no_grad():
-        input_ids = tokenizer(prompt, return_tensors="pt").input_ids.to(0)
+        input_ids = tokenizer(prompt, return_tensors="pt").input_ids
+        input_ids = input_ids[:, :-1].to(0) # This is to remove the mysterious EOS that seriously degrades quality https://github.com/huggingface/transformers/pull/21955#issuecomment-1454979110
         #input_ids = tokenizer(prompt, padding=True, truncation=True, return_tensors="pt").input_ids.to(0)
         generated_ids = model.generate(
             input_ids,
