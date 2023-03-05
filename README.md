@@ -1,7 +1,12 @@
 # llama_infer
 Inference script for Meta's LLaMA models using Hugging Face wrapper as in https://github.com/huggingface/transformers/pull/21955
 
-## First convert the weights
+## First install from source
+```
+git clone https://github.com/huggingface/transformers.git --branch zphang:llama_push --depth=1
+python3 setup.py develop
+```
+## Second convert the weights
 ```
 python src/transformers/models/llama/convert_llama_weights_to_hf.py \
     --input_dir /path/to/downloaded/llama/weights \
