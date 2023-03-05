@@ -1,6 +1,7 @@
 # llama_infer
 Inference script for Meta's LLaMA models using Hugging Face wrapper
 
+# 7B model
 ## int8 (seems bad)
 ### contrastive search
 'Puma is a multicolored cat. He has a white face, paws, chest, belly and tail tip. He has green eyes.\nPuma\'s favorite food is tuna.\nRetrieved from "http://thelittlestpetshop.wikia.com/wiki/Puma?oldid=4113"UIVie
