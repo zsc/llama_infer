@@ -21,7 +21,7 @@ def get_device_map(model_name, device, do_int8):
         model = AutoModelForCausalLM.from_config(config)
 
     d = {0: "16GiB"}
-    for i in range(1, 4):
+    for i in range(1, 6):
         d[i] = "24GiB"
     device_map = infer_auto_device_map(
         model, max_memory=d, dtype=torch.int8 if do_int8 else torch.float16, no_split_module_classes=["BloomBlock", "OPTDecoderLayer", "LLaMADecoderLayer"]
