@@ -30,7 +30,8 @@ def get_device_map(model_name, device, do_int8):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model_id", type=str, default="/data/llama/hf/7b/llama-7b/")
+    parser.add_argument("--model_path", type=str, default="/data/llama/hf/")
+    parser.add_argument("--variant", type=str, default="65b", choices=["7b", "13b", "33b", "65b"])
     parser.add_argument(
         "--device", type=str, choices=["a100-40g", "v100-32g"], default="a100-40g"
     )
@@ -39,7 +40,7 @@ if __name__ == "__main__":
     parser.add_argument("--port", type=int, default=12333)
     args = parser.parse_args()
 
-    model_id = args.model_id
+    model_id = f"{args.model_path}{args.variant}/llama-{args.variant}"
     model = AutoModelForCausalLM.from_pretrained(
         model_id,
         device_map="auto",#get_device_map(model_id, args.device, args.do_int8),
@@ -47,8 +48,7 @@ if __name__ == "__main__":
         low_cpu_mem_usage=args.low_cpu_mem_usage,
         load_in_8bit=args.do_int8,
     )
-    #tokenizer = AutoTokenizer.from_pretrained("/data/llama/hf/7b/tokenizer/", use_fast="/opt" not in model_id)
-    tokenizer = transformers.LLaMATokenizer.from_pretrained("/data/llama/hf/7b/tokenizer/")
+    tokenizer = AutoTokenizer.from_pretrained(f"{args.model_path}{args.variant}/tokenizer/", use_fast="/opt" not in model_id)
     #tokenizer.pad_token_id = -1
 
     generate_kwargs = {
