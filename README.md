@@ -4,7 +4,9 @@ Inference script for Meta's LLaMA models using Hugging Face wrapper as in https:
 ||fp16|int8(bitsandbytes)|
 |--|--|--|
 |V100|OK, 5xV100|Bad results, short generated sequences|
-|A100|Not tested, should be OK|OK, 3xA100|
+|A100|OK, 6xA100 when using "auto"|OK, 3xA100|
+
+Note that I didn't tweak the device_map for the case of A100 fp16. I expect it would be possible to reduce to somewhere near 4xA100 .
 
 ## First install from source
 ```
