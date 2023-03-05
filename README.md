@@ -3,7 +3,7 @@ Inference script for Meta's LLaMA models using Hugging Face wrapper as in https:
 
 ## First install from source
 ```
-git clone https://github.com/huggingface/transformers.git --branch zphang:llama_push --depth=1
+git clone https://github.com/zphang/transformers.git --branch llama_push --depth=1
 cd transformers
 python3 setup.py develop --user
 ```
