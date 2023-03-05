@@ -24,7 +24,7 @@ def get_device_map(model_name, device, do_int8):
     for i in range(1, 4):
         d[i] = "24GiB"
     device_map = infer_auto_device_map(
-        model, max_memory=d, dtype=torch.int8 if do_int8 else torch.float16, no_split_module_classes=["BloomBlock", "OPTDecoderLayer"]
+        model, max_memory=d, dtype=torch.int8 if do_int8 else torch.float16, no_split_module_classes=["BloomBlock", "OPTDecoderLayer", "LLaMADecoderLayer"]
     )
     print(device_map)
     del model
