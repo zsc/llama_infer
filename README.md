@@ -2,7 +2,10 @@
 Inference script for Meta's LLaMA models using Hugging Face wrapper as in https://github.com/huggingface/transformers/pull/21955
 
 ## 7B model
+
 ### int8 (decent now after removing extra EOS)
+```python3 test_llam.py --do_int8 --low_cpu_mem_usage --variant 7b```
+
 #### contrastive search
 ```
 Puma is a 1996 film starring Jackie Chan and Leslie Cheung Kwok-wing.
@@ -12,6 +15,8 @@ Chen Zhen (Jackie Chan) is a Chinese student who has traveled to Japan to study 
 
 
 ### float16 (decent)
+```python3 test_llam.py --low_cpu_mem_usage --variant 7b```
+
 #### contrastive search
 ```
 Puma is a 1980’s classic that has stood the test of time. With its sleek design and sporty look, Puma is a shoe that can be worn with anything and everything.
