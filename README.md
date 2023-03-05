@@ -1,5 +1,5 @@
 # llama_infer
-Inference script for Meta's LLaMA models using Hugging Face wrapper
+Inference script for Meta's LLaMA models using Hugging Face wrapper as in https://github.com/huggingface/transformers/pull/21955
 
 ## 7B model
 ### int8 (seems bad)
