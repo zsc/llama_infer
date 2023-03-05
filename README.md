@@ -14,6 +14,15 @@ git clone https://github.com/zphang/transformers.git --branch llama_push --depth
 cd transformers
 python3 setup.py develop --user
 ```
+
+### Hack for tokenizer (may not be required)
+If tokeinizer complains, please setup a soft link to make it happy.
+```
+/data/llama/hf/65b/tokenizer$ ls -lh
+total 496K
+lrwxrwxrwx 1 brainpp brainpp   23 Mar  5 13:51 config.json -> special_tokens_map.json
+```
+
 ## Second convert the weights
 ```
 python3 src/transformers/models/llama/convert_llama_weights_to_hf.py \
