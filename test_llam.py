@@ -69,7 +69,7 @@ if __name__ == "__main__":
         input_ids = tokenizer(prompt, return_tensors="pt").input_ids
         assert len(input_ids) == 1, len(input_ids)
         if input_ids[0][-1] == 2: # 2 is EOS, hack to remove. If the prompt is ending with EOS, often the generation will stop abruptly.
-            input_ids = input_ids[:-1]
+            input_ids = input_ids[:, :-1]
         input_ids.to(0)
         #input_ids = tokenizer(prompt, padding=True, truncation=True, return_tensors="pt").input_ids.to(0)
         generated_ids = model.generate(
