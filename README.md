@@ -1,6 +1,11 @@
 # llama_infer
 Inference script for Meta's LLaMA models using Hugging Face wrapper as in https://github.com/huggingface/transformers/pull/21955
 
+||fp16|int8(bitsandbytes)|
+|--|--|--|
+|V100|OK, 5xV100|Bad results, short generated sequences|
+|A100|Not tested, should be OK|OK, 3xA100|
+
 ## First install from source
 ```
 git clone https://github.com/zphang/transformers.git --branch llama_push --depth=1
