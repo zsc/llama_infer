@@ -13,13 +13,16 @@ from typing import List, Union
 
 
 def get_device_map(model_name, device, do_int8):
+    if device == "a100-40g":
+        return "auto"
+
     with init_empty_weights():
         config = AutoConfig.from_pretrained(model_name)
         model = AutoModelForCausalLM.from_config(config)
 
-    d = {0: "16GiB"}
-    for i in range(1, 6):
-        d[i] = "33GiB"
+    d = {0: "25GiB"}
+    for i in range(1, 4):
+        d[i] = "29GiB"
     device_map = infer_auto_device_map(
         model, max_memory=d, dtype=torch.int8 if do_int8 else torch.float16, no_split_module_classes=["BloomBlock", "OPTDecoderLayer"]
     )
@@ -43,7 +46,7 @@ if __name__ == "__main__":
     model_id = f"{args.model_path}{args.variant}/llama-{args.variant}"
     model = AutoModelForCausalLM.from_pretrained(
         model_id,
-        device_map="auto",#get_device_map(model_id, args.device, args.do_int8),
+        device_map=get_device_map(model_id, args.device, args.do_int8),
         torch_dtype=torch.int8 if args.do_int8 else torch.float16,
         low_cpu_mem_usage=args.low_cpu_mem_usage,
         load_in_8bit=args.do_int8,
