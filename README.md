@@ -4,11 +4,12 @@ Inference script for Meta's LLaMA models using Hugging Face wrapper as in https:
 ## First install from source
 ```
 git clone https://github.com/huggingface/transformers.git --branch zphang:llama_push --depth=1
-python3 setup.py develop
+cd transformers
+python3 setup.py develop --user
 ```
 ## Second convert the weights
 ```
-python src/transformers/models/llama/convert_llama_weights_to_hf.py \
+python3 src/transformers/models/llama/convert_llama_weights_to_hf.py \
     --input_dir /path/to/downloaded/llama/weights \
     --model_size 7B \
     --output_dir /data/llama/hf/
