@@ -16,14 +16,6 @@ cd transformers
 python3 setup.py develop --user
 ```
 
-### Hack for tokenizer (may not be required)
-If tokeinizer complains, please setup a soft link to make it happy.
-```
-/data/llama/hf/65b/tokenizer$ ls -lh
-total 496K
-lrwxrwxrwx 1 brainpp brainpp   23 Mar  5 13:51 config.json -> special_tokens_map.json
-```
-
 ## Second convert the weights
 ```
 python3 src/transformers/models/llama/convert_llama_weights_to_hf.py \
@@ -33,6 +25,14 @@ python3 src/transformers/models/llama/convert_llama_weights_to_hf.py \
 ```
 
 Here we assume the converted weigths are in `/data/llama/hf/` .
+
+### Hack for tokenizer (may not be required)
+If tokeinizer complains, please setup a soft link to make it happy.
+```
+/data/llama/hf/65b/tokenizer$ ls -lh
+total 496K
+lrwxrwxrwx 1 brainpp brainpp   23 Mar  5 13:51 config.json -> special_tokens_map.json
+```
 
 ## 7B model
 
