@@ -1,6 +1,7 @@
 # llama_infer
 Inference script for Meta's LLaMA models using Hugging Face wrapper as in https://github.com/huggingface/transformers/pull/21955
 
+For the 65B model:
 ||fp16|int8(bitsandbytes)|
 |--|--|--|
 |V100|OK, 5xV100|Bad results, short generated sequences|
