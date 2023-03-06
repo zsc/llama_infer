@@ -58,4 +58,4 @@ Today, the Puma Suede is one of the most popular
 ```
 
 ## 65B model
-Work like a charm.
+Work like a charm. Sample generations omitted.
