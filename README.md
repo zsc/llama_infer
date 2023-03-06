@@ -56,3 +56,6 @@ Puma is a 1980’s classic that has stood the test of time. With its sleek desig
 The Puma Suede is a sneaker that was introduced in 1968 by Adi Dassler and his brother Rudi. The Suede’s design was inspired by the moccasin shoes that Native Americans wore in the 19th century. It was originally called Clyde Court, after Walt Clyde Frazier, a basketball player for the New York Knicks.\nThe first version of the Puma Suede was made of leather and had a rubber sole. Later, the design was changed to a canvas upper and a plastic wedge heel. This version was more popular and is the one that we know today.
 Today, the Puma Suede is one of the most popular
 ```
+
+## 65B model
+Work like a charm.
