@@ -1,5 +1,5 @@
 # News
-* Int4 or even smaller quantized LLaMA now avaiable: https://github.com/megvii-research/Sparsebit/blob/main/large_language_models/llama/quantization/README.md
+* Int4 or even smaller quantized LLaMA now avaiable! https://github.com/megvii-research/Sparsebit/blob/main/large_language_models/llama/quantization/README.md
 
 # llama_infer
 Inference script for Meta's LLaMA models using Hugging Face wrapper as in https://github.com/huggingface/transformers/pull/21955
