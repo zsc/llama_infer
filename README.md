@@ -27,7 +27,7 @@ python3 src/transformers/models/llama/convert_llama_weights_to_hf.py \
     --output_dir /data/llama/hf/
 ```
 
-Here we assume the converted weigths are in `/data/llama/hf/` .
+Here we assume the converted weights are in `/data/llama/hf/` .
 
 ### Hack for tokenizer (may not be required)
 If tokeinizer complains, please setup a soft link to make it happy.
