@@ -13,11 +13,24 @@ For the 65B model:
 Note that I didn't tweak the device_map for the case of A100 fp16. I expect it would be possible to reduce to somewhere near 4xA100 .
 
 ## First install from source
+
+<details>
+
 ```
 git clone https://github.com/zphang/transformers.git --branch llama_push --depth=1
 cd transformers
 python3 setup.py develop --user
 ```
+</details>
+
+
+```
+git clone https://github.com/huggingface/transformers.git --depth=1
+cd transformers
+python3 setup.py develop --user
+```
+
+Note: there is still ongoing confusion between LLaMATokenizer and LlamaTokenizer. When you load a model and there are complaints about missing `LLaMATokenizer`, you may have to temporarily use https://github.com/mbehm/transformers/ . Otherwise, you can go for the latest head in https://github.com/huggingface/transformers/ now.
 
 ## Second convert the weights
 ```
